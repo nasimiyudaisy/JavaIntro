@@ -1,0 +1,9 @@
+public class Example-1{
+
+public static void main{string}[] args)(
+
+x=50;
+system.out.printin("We are learning Java Today");
+}
+
+}
