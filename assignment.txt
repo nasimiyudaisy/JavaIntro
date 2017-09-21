@@ -1,0 +1,19 @@
+STUDENT Main
+student
+Student Functions
+
+
+ask student to enter details
+  name
+  reg no.
+  college
+  date of birth
+  school
+  course
+  
+  javamarks
+  python marks
+  php marks
+  total marks (sum of marks)
+
+outputthem
