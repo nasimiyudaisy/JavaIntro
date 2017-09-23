@@ -37,6 +37,7 @@ public class Main {
         char grade1;
 
 
+
         System.out.println("enter the name of the student");
         s1.setName(scanner.nextLine());
 
@@ -107,22 +108,17 @@ public class Main {
         sum = MyFunctions.add(s1.getJavaMarks(), s1.getPhpMarks(), s1.getPythonMarks());
         average = MyFunctions.average(s1.getJavaMarks(), s1.getPhpMarks(), s1.getPythonMarks());
 
-    if (average >= 90) {
-        grade1 = 'A';
-    }
-      else if (average >=80 && average < 90) {
-        grade1 = 'B';
-    }
-        else if (average >= 70 && average < 80) {
-        grade1 = 'C';
-    }
-    else if (average >= 60 && average < 70) {
-        grade1 = 'D';
-    } else {
-        grade1='E';
-    }
-
-
+        if (average >= 90) {
+            grade1 = 'A';
+        } else if (average >= 80 && average < 90) {
+            grade1 = 'B';
+        } else if (average >= 70 && average < 80) {
+            grade1 = 'C';
+        } else if (average >= 60 && average < 70) {
+            grade1 = 'D';
+        } else {
+            grade1 = 'E';
+        }
 
 
         System.out.println("Name:" + s1.getName());
@@ -130,12 +126,14 @@ public class Main {
         System.out.println("College:" + s1.getCollege());
         System.out.println("regNumber:" + s1.getRegNo());
         System.out.println("Sum##" + sum);
-        System.out.println("grade1##" +grade1);
+        System.out.println("grade1##" + grade1);
 
 
+
+        }
 
     }
 
-    }
+
 
 

@@ -1,0 +1,13 @@
+git clone (copying repository url)
+
+git status(readme status)
+
+git add .
+
+git commit -m "work done"
+
+git push
+
+git status
+
+N/B: 0n the first time of cloning and email id and user password requested you will be compelled to git config
