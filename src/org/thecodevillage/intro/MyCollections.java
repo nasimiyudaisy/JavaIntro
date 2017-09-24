@@ -183,6 +183,7 @@ public class MyCollections {
                         System.out.println("MyCars##" + myCars.get(count).getColor());
                         System.out.println("MyCars##" + myCars.size());
 
+
                     }
 
                 }
