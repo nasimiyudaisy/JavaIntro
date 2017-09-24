@@ -44,6 +44,7 @@ public class StudentMain {
         s1.setPythonMarks(60);
         s1.setJavaMarks(90);
 
+
         Student s2 = new Student();
         s2.setName("Elkanah");
         s2.setRegNo("sc200-1332/2014");
@@ -129,6 +130,26 @@ public class StudentMain {
         System.out.println("Sum;" + sumJav + "\n\n");
 
 
+        int totalMarkss1 = MyFunctions.add(s1.getJavaMarks(), s1.getPhpMarks(), s1.getPythonMarks());
+        int totalMarkss2 = MyFunctions.add(s2.getJavaMarks(), s2.getPhpMarks(), s2.getPythonMarks());
+        int totalMarkss3 = MyFunctions.add(s3.getJavaMarks(), s3.getPhpMarks(), s3.getPythonMarks());
+
+       int  averages1 = MyFunctions.average(s1.getJavaMarks(), s1.getPhpMarks(), s1.getPythonMarks());
+       int  averages2 = MyFunctions.average(s2.getJavaMarks(), s2.getPhpMarks(), s2.getPythonMarks());
+       int  averages3 = MyFunctions.average(s3.getJavaMarks(), s3.getPhpMarks(), s3.getPythonMarks());
+
+       int avgPhp= sumPhp/3;
+
+
+        for (int count = 0; count < myPhpMarks.size(); count++) {
+
+            System.out.println("Studentname" + count + "\t Value:" +myPhpMarks.get(count));
+            sumPhp +=myPhpMarks.get(count);
+        }
+        System.out.println("average;" +  + avgPhp + "\n\n");
+
+
+
 
         for (int count = 0; count < myStudents.size(); count++) {
 
@@ -139,6 +160,14 @@ public class StudentMain {
                 System.out.println("MyStudents##" + myStudents.get(count).getPhpMarks());
                 System.out.println("MyStudents##" + myStudents.get(count).getJavaMarks());
                 System.out.println("MyStudents##" + myStudents.size());
+                System.out.println("MyStudents##" + myStudents.size());
+                System.out.println("total markss1:"+totalMarkss1);
+                System.out.println("total markss2:"+totalMarkss2);
+                System.out.println("total markss3:"+totalMarkss3);
+                System.out.println("averages1:"+averages1);
+                System.out.println("averages2:"+averages2);
+                System.out.println("averages3:"+averages3);
+
 
 
 
