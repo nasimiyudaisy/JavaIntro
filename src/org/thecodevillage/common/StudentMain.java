@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Created by daisy amani on 9/23/2017.
+ * Created by nasimiyu daisy on 9/23/2017.
  */
 public class StudentMain {
 
