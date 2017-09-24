@@ -103,11 +103,8 @@ public class StudentMain {
 
         for (int count = 0; count < myPythonMarks.size(); count++) {
 
-            System.out.println("Item" + count + "\t Value:" + myPythonMarks.get(count));
-        }
-        for (int count = 0; count < myPythonMarks.size(); count++) {
-
             System.out.println("Studentname" + count + "\t Value:" +myPythonMarks.get(count));
+
             sumPyt +=myPythonMarks.get(count);
         }
         System.out.println("Sum;" + sumPyt + "\n\n");
@@ -118,14 +115,22 @@ public class StudentMain {
 
         for (int count = 0; count < myJavaMarks.size(); count++) {
 
-            System.out.println("Item" + count + "\t Value:" + myJavaMarks.get(count));
-        }
-        for (int count = 0; count < myJavaMarks.size(); count++) {
-
             System.out.println("Studentname" + count + "\t Value:" +myJavaMarks.get(count));
             sumJav +=myJavaMarks.get(count);
         }
         System.out.println("Sum;" + sumJav + "\n\n");
+
+
+        int avgPhp= sumPhp/3;
+
+
+        for (int count = 0; count < myPhpMarks.size(); count++) {
+
+            System.out.println("Studentname" + count + "\t Value:" +myPhpMarks.get(count));
+            sumPhp +=myPhpMarks.get(count);
+        }
+        System.out.println("averagephp;" +  + avgPhp + "\n\n");
+
 
 
         int totalMarkss1 = MyFunctions.add(s1.getJavaMarks(), s1.getPhpMarks(), s1.getPythonMarks());
@@ -135,32 +140,6 @@ public class StudentMain {
        int  averages1 = MyFunctions.average(s1.getJavaMarks(), s1.getPhpMarks(), s1.getPythonMarks());
        int  averages2 = MyFunctions.average(s2.getJavaMarks(), s2.getPhpMarks(), s2.getPythonMarks());
        int  averages3 = MyFunctions.average(s3.getJavaMarks(), s3.getPhpMarks(), s3.getPythonMarks());
-
-
-
-       int avgPhp= sumPhp/3;
-
-
-        for (int count = 0; count < myPhpMarks.size(); count++) {
-
-            System.out.println("Studentname" + count + "\t Value:" +myPhpMarks.get(count));
-            sumPhp +=myPhpMarks.get(count);
-        }
-        System.out.println("average;" +  + avgPhp + "\n\n");
-
-
-        int avgPyt= sumPyt/3;
-
-
-        for (int count = 0; count < myPythonMarks.size(); count++) {
-
-            System.out.println("Studentname" + count + "\t Value:" +myPythonMarks.get(count));
-
-            avgPyt +=myPythonMarks.get(count);
-        }
-        System.out.println("average;" +  + avgPyt + "\n\n");
-
-
 
 
 
