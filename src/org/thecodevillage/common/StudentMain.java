@@ -44,14 +44,12 @@ public class StudentMain {
         s1.setPythonMarks(60);
         s1.setJavaMarks(90);
 
-
         Student s2 = new Student();
         s2.setName("Elkanah");
         s2.setRegNo("sc200-1332/2014");
         s2.setPhpMarks(60);
         s2.setPythonMarks(75);
         s2.setJavaMarks(54);
-
 
         Student s3 = new Student();
         s3.setName("Daisy");
@@ -138,6 +136,8 @@ public class StudentMain {
        int  averages2 = MyFunctions.average(s2.getJavaMarks(), s2.getPhpMarks(), s2.getPythonMarks());
        int  averages3 = MyFunctions.average(s3.getJavaMarks(), s3.getPhpMarks(), s3.getPythonMarks());
 
+
+
        int avgPhp= sumPhp/3;
 
 
@@ -147,6 +147,19 @@ public class StudentMain {
             sumPhp +=myPhpMarks.get(count);
         }
         System.out.println("average;" +  + avgPhp + "\n\n");
+
+
+        int avgPyt= sumPyt/3;
+
+
+        for (int count = 0; count < myPythonMarks.size(); count++) {
+
+            System.out.println("Studentname" + count + "\t Value:" +myPythonMarks.get(count));
+
+            avgPyt +=myPythonMarks.get(count);
+        }
+        System.out.println("average;" +  + avgPyt + "\n\n");
+
 
 
 
