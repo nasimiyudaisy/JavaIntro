@@ -86,6 +86,18 @@ public class StudentMain {
         myPythonMarks.size();
         myJavaMarks.size();
 
+        for (int countttt = 0; countttt < myStudents.size(); countttt++) {
+
+            System.out.println("MyStudents##" + myStudents.get(countttt).getName());
+            System.out.println("MyStudents##" + myStudents.get(countttt).getRegNo());
+            System.out.println("MyStudents##" + myStudents.get(countttt).getPhpMarks());
+            System.out.println("MyStudents##" + myStudents.get(countttt).getPythonMarks());
+            System.out.println("MyStudents##" + myStudents.get(countttt).getJavaMarks());
+            System.out.println("MyStudents##" + myStudents.size());
+        }
+
+        int cntt = 0;
+
         int sumPhp = 0;
 
         for (int count = 0; count < myPhpMarks.size(); count++) {
@@ -94,7 +106,7 @@ public class StudentMain {
 
             sumPhp += myPhpMarks.get(count);
         }
-        System.out.println("Sum;" + sumPhp + "\n\n");
+        System.out.println("SumPhp;" + sumPhp + "\n\n");
 
 
         int sumPyt = 0;
@@ -105,7 +117,7 @@ public class StudentMain {
 
             sumPyt += myPythonMarks.get(count);
         }
-        System.out.println("Sum;" + sumPyt + "\n\n");
+        System.out.println("SumPyt;" + sumPyt + "\n\n");
 
 
         int sumJav = 0;
@@ -116,7 +128,7 @@ public class StudentMain {
 
             sumJav += myJavaMarks.get(count);
         }
-        System.out.println("Sum;" + sumJav + "\n\n");
+        System.out.println("SumJav;" + sumJav + "\n\n");
 
 
         int avgPhp = sumPhp / 3;
@@ -150,6 +162,7 @@ public class StudentMain {
         } else if (avgPyt > 0 && avgPyt <= 20) {
             System.out.println("D");
 
+
             int avgJav = sumJav / 3;
 
             System.out.println("your Java grade is");
@@ -161,45 +174,33 @@ public class StudentMain {
                 System.out.println("C");
             } else if (avgJav > 20 && avgJav <= 40) {
                 System.out.println("D");
-            }
 
 
-            for (int count = 0; count < myPhpMarks.size(); count++) {
+                int totalMarkss1 = MyFunctions.add(s1.getJavaMarks(), s1.getPhpMarks(), s1.getPythonMarks());
+                int totalMarkss2 = MyFunctions.add(s2.getJavaMarks(), s2.getPhpMarks(), s2.getPythonMarks());
+                int totalMarkss3 = MyFunctions.add(s3.getJavaMarks(), s3.getPhpMarks(), s3.getPythonMarks());
 
-                System.out.println("Studentname" + count + "\t Value:" + myPhpMarks.get(count));
-                sumPhp += myPhpMarks.get(count);
-            }
-            System.out.println("averagephp;" + +avgPhp + "\n\n");
-
-
-            int totalMarkss1 = MyFunctions.add(s1.getJavaMarks(), s1.getPhpMarks(), s1.getPythonMarks());
-            int totalMarkss2 = MyFunctions.add(s2.getJavaMarks(), s2.getPhpMarks(), s2.getPythonMarks());
-            int totalMarkss3 = MyFunctions.add(s3.getJavaMarks(), s3.getPhpMarks(), s3.getPythonMarks());
-
-            int averages1 = MyFunctions.average(s1.getJavaMarks(), s1.getPhpMarks(), s1.getPythonMarks());
-            int averages2 = MyFunctions.average(s2.getJavaMarks(), s2.getPhpMarks(), s2.getPythonMarks());
-            int averages3 = MyFunctions.average(s3.getJavaMarks(), s3.getPhpMarks(), s3.getPythonMarks());
+                int averages1 = MyFunctions.average(s1.getJavaMarks(), s1.getPhpMarks(), s1.getPythonMarks());
+                int averages2 = MyFunctions.average(s2.getJavaMarks(), s2.getPhpMarks(), s2.getPythonMarks());
+                int averages3 = MyFunctions.average(s3.getJavaMarks(), s3.getPhpMarks(), s3.getPythonMarks());
 
 
-                for (int count = 0; count < myStudents.size(); count++) {
-
-                    System.out.println("Name##" + myStudents.get(count).getName()
-                            + "\tReg No:" + myStudents.get(count).getRegNo() + "\tPython Marks: " + myStudents.get(count).getPythonMarks()
-                            + "\tPhp Marks:" + myStudents.get(count).getPhpMarks() + "\tJava Marks:" + myStudents.get(count).getJavaMarks());
-
-                    System.out.println("MyStudents##" + myStudents.size());
-                    System.out.println("total markss1:" + totalMarkss1);
-                    System.out.println("total markss2:" + totalMarkss2);
-                    System.out.println("total markss3:" + totalMarkss3);
-                    System.out.println("averages1:" + averages1);
-                    System.out.println("averages2:" + averages2);
-                    System.out.println("averages3:" + averages3);
+                System.out.println("MyStudents##" + myStudents.size());
+                System.out.println("total markss1:" + totalMarkss1);
+                System.out.println("total markss2:" + totalMarkss2);
+                System.out.println("total markss3:" + totalMarkss3);
+                System.out.println("averages1:" + averages1);
+                System.out.println("averages2:" + averages2);
+                System.out.println("averages3:" + averages3);
 
 
-                }
             }
         }
     }
+}
+
+
+
 
 
 
