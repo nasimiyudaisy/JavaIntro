@@ -88,12 +88,9 @@ public class StudentMain {
 
         for (int countttt = 0; countttt < myStudents.size(); countttt++) {
 
-            System.out.println("MyStudents##" + myStudents.get(countttt).getName());
-            System.out.println("MyStudents##" + myStudents.get(countttt).getRegNo());
-            System.out.println("MyStudents##" + myStudents.get(countttt).getPhpMarks());
-            System.out.println("MyStudents##" + myStudents.get(countttt).getPythonMarks());
-            System.out.println("MyStudents##" + myStudents.get(countttt).getJavaMarks());
-            System.out.println("MyStudents##" + myStudents.size());
+            System.out.print("Name##" + myStudents.get(countttt).getName()+"\t"+"Reg No.##" + myStudents.get(countttt).getRegNo()+"\t"+"Php Marks: ##" + myStudents.get(countttt).getPhpMarks()+"\t"+
+                    "Python Marks: ##" + myStudents.get(countttt).getPythonMarks()+"\t"+ "Java Marks##" + myStudents.get(countttt).getJavaMarks());
+            //System.out.println("MyStudents##" + myStudents.size());
         }
 
         int cntt = 0;
@@ -133,59 +130,43 @@ public class StudentMain {
 
         int avgPhp = sumPhp / 3;
 
-        System.out.println("your php grade is");
-        if (avgPhp > 80) {
-            System.out.println("A");
-        } else if (avgPhp > 60 && avgPhp <= 80) {
-            System.out.println("B");
-        } else if (avgPhp > 40 && avgPhp <= 60) {
-            System.out.println("C");
-        } else if (avgPhp > 20 && avgPhp <= 40) {
-            System.out.println("D");
+        System.out.println("your php grade is: "+MyFunctions.getGrade(avgPhp));
 
-        } else if (avgPhp > 0 && avgPhp <= 20) {
-            System.out.println("D");
-        }
 
         int avgPyt = sumPyt / 3;
-
-        System.out.println("your python grade is");
-        if (avgPyt > 80) {
-            System.out.println("A");
-        } else if (avgPyt > 60 && avgPyt <= 80) {
-            System.out.println("B");
-        } else if (avgPyt > 40 && avgPyt <= 60) {
-            System.out.println("C");
-        } else if (avgPyt > 20 && avgPyt <= 40) {
-            System.out.println("D");
-
-        } else if (avgPyt > 0 && avgPyt <= 20) {
-            System.out.println("D");
+        System.out.println("your pyth grade is: "+MyFunctions.getGrade(avgPyt));
 
 
-            int avgJav = sumJav / 3;
+        int avgJava = sumJav / 3;
 
-            System.out.println("your Java grade is");
-            if (avgPyt > 80) {
-                System.out.println("A");
-            } else if (avgJav > 60 && avgJav <= 80) {
-                System.out.println("B");
-            } else if (avgJav > 40 && avgJav <= 60) {
-                System.out.println("C");
-            } else if (avgJav > 20 && avgJav <= 40) {
-                System.out.println("D");
+        System.out.println("your java grade is: "+MyFunctions.getGrade(avgJava));
 
 
-                int totalMarkss1 = MyFunctions.add(s1.getJavaMarks(), s1.getPhpMarks(), s1.getPythonMarks());
-                int totalMarkss2 = MyFunctions.add(s2.getJavaMarks(), s2.getPhpMarks(), s2.getPythonMarks());
-                int totalMarkss3 = MyFunctions.add(s3.getJavaMarks(), s3.getPhpMarks(), s3.getPythonMarks());
+
+
+        int totalMarkss1 = MyFunctions.add(s1.getJavaMarks(), s1.getPhpMarks(), s1.getPythonMarks());
+        int totalMarkss2 = MyFunctions.add(s2.getJavaMarks(), s2.getPhpMarks(), s2.getPythonMarks());
+        int totalMarkss3 = MyFunctions.add(s3.getJavaMarks(), s3.getPhpMarks(), s3.getPythonMarks());
+
+
+                int avgs1 = totalMarkss1/3;
+        System.out.println("grade of s1 is: "+MyFunctions.getGrade(avgs1));
+
+
+        int avgs2 = totalMarkss2/3;
+        System.out.println("grade of s2 is: "+MyFunctions.getGrade(avgs2));
+
+        int avgs3 = totalMarkss3/3;
+        System.out.println("grade of s3 is: "+MyFunctions.getGrade(avgs3));
+
 
                 int averages1 = MyFunctions.average(s1.getJavaMarks(), s1.getPhpMarks(), s1.getPythonMarks());
                 int averages2 = MyFunctions.average(s2.getJavaMarks(), s2.getPhpMarks(), s2.getPythonMarks());
                 int averages3 = MyFunctions.average(s3.getJavaMarks(), s3.getPhpMarks(), s3.getPythonMarks());
+            
 
 
-                System.out.println("MyStudents##" + myStudents.size());
+            System.out.println("MyStudents##" + myStudents.size());
                 System.out.println("total markss1:" + totalMarkss1);
                 System.out.println("total markss2:" + totalMarkss2);
                 System.out.println("total markss3:" + totalMarkss3);
@@ -196,8 +177,9 @@ public class StudentMain {
 
             }
         }
-    }
-}
+
+
+
 
 
 

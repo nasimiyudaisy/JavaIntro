@@ -28,6 +28,30 @@ public class MyFunctions {
     public static double division(double m, double n) {
         return m / n;
     }
+
+    public static String getGrade(int marks){
+        String grade="";
+        if (marks > 80) {
+            System.out.println("A");
+            grade ="A";
+        } else if (marks > 60 && marks <= 80) {
+            System.out.println("B");
+            grade ="B";
+        } else if (marks > 40 && marks <= 60) {
+            System.out.println("C");
+            grade ="C";
+
+        } else if (marks > 20 && marks <= 40) {
+            System.out.println("D");
+            grade ="D";
+        } else if (marks <= 20) {
+            System.out.println("E");
+            grade ="E";
+        }
+
+        return grade;
+    }
+
     }
 
 
