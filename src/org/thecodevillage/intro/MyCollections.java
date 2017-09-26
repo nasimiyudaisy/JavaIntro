@@ -2,8 +2,7 @@ package src.org.thecodevillage.intro;
 
 import src.org.thecodevillage.common.Student;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 
 /**
@@ -183,6 +182,31 @@ public class MyCollections {
                         System.out.println("MyCars##" + myCars.get(count).getColor());
                         System.out.println("MyCars##" + myCars.size());
 
+                        for (int z=0; z < myList.size(); z++){
+                            System.out.println("MyList ODD/EVEN##"+myList.get(z));
+                            if(myList.get(z)%2==0)
+                                System.out.println("Even No##"+myList.get(z));
+
+                            if(myList.get(z)%2!=0)
+                                System.out.println("ODD No##"+myList.get(z));
+                        }
+
+
+
+                        LinkedList list=new LinkedList<>();
+                        LinkedList<String> someList=new LinkedList<>();
+                        LinkedList<Car> someListCar=new LinkedList<>();
+                        someList.add("Hilda");
+
+                        someList.add(0,"Nicholas");
+                        someList.remove(0);
+
+                        Map<Integer,String> myHashmap=new HashMap<>();
+                        Map<String,String> gender=new HashMap<>();
+                        myHashmap.put(12345,"Nicholas Odingo");
+                        myHashmap.get(12345);
+
+                        gender.put("F","Female");
 
                     }
 
