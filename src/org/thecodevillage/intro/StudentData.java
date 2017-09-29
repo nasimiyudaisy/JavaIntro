@@ -65,12 +65,14 @@ public class StudentData {
         // get method
 
         System.out.println("Element at 0 index:" + someList.get(0));
+
         // set method
         someList.set(0, "zero");
         System.out.println(someList);
 
         someList.remove(0);
         System.out.println("some list after removing the element at index o:" +someList);
+
 
 
 
