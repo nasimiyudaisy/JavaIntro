@@ -1,6 +1,7 @@
 package src.org.thecodevillage.common;
 
 import java.sql.*;
+import src.org.thecodevillage.java.*;
 
 /**
  * Created by nasimiyu daisy on 9/29/2017.
@@ -31,7 +32,7 @@ public class MyDbConn {
         }
         updateStudent();
         deleteStudent();
-        insertStudent();
+        //insertStudent();
     }
 
 
@@ -68,13 +69,13 @@ public class MyDbConn {
     }
     //inserting students
 
-    public static void insertStudent() {
-        //String name=student.getName(
+    public static void insertStudent(src.org.thecodevillage.java.Student student) {
+        //String name=student.getName();
         try {
             Connection conn = getDbConnection("jdbc:mysql://localhost:3306/student_db", "root", "");
             System.out.println("insert students:");
             Statement stmt = conn.createStatement();
-            int rs1 = stmt.executeUpdate("insert into tbl_students(name,reg_no,course, date_of_birth, java_marks, php_marks, python_marks)VALUES ('Gloria', '65679','IT','1994-09-09',50,70,80);");
+            int rs1 = stmt.executeUpdate("insert into tbl_students(name,reg_no,course, date_of_birth, java_marks, php_marks, python_marks)VALUES (student.getName(),student.getRegNo(),student.getCourse(),student.getDateBirth(),student.getJavaMarks(),student.getPhpMarks(), student.getPythonMarks()");
             conn.close();
         } catch (Exception e) {
             System.out.println(e);

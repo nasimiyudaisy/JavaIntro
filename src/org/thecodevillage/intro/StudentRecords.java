@@ -117,14 +117,14 @@ public class StudentRecords {
             
 
 
-            Scanner input = new Scanner(System.in);
-            System.out.println("enter record no to display content on the list:" +list);
-            String rec= input.next();
+            //Scanner input = new Scanner(System.in);
+            //System.out.println("enter record no to display content on the list:" +list);
+            //String rec= input.next();
             for (StudentRecords records:list) {
-                if (records.getRecord(). equals(rec)){
+                //if (records.getRecord(). equals(rec)){
                     System.out.println(records.getRecord()+"\t" +records.getName()+"\t" +records.getCourse()+"\t"+ records.getCollege()
                     +"\t" +records.getRegNo()+"\t"+ records.getDateBirth()+"\t"+records.getJavaMarks()+"\t"+records.getPythonMarks()+"\t"+records.getPhpMarks());
-                }
+                //}
             }
     }
 
