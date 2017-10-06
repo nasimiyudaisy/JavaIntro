@@ -1,7 +1,10 @@
 package src.org.thecodevillage.common;
 
 import java.sql.*;
+import java.util.ArrayList;
+
 import src.org.thecodevillage.java.*;
+import src.org.thecodevillage.java.Student;
 
 /**
  * Created by nasimiyu daisy on 9/29/2017.
@@ -34,6 +37,37 @@ public class MyDbConn {
         deleteStudent();
         //insertStudent();
     }
+
+    //list of students
+
+
+    public ArrayList<Student> getMyList() {
+
+        ArrayList<Student> myList = new ArrayList<>();
+        Connection connection=getDbConnection("\"jdbc:mysql://localhost:3306/student_db", "root", "");
+        String query = "SELECT * from tbl_students";
+        Statement st;
+        ResultSet rs;
+
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet rs1 = statement.executeQuery("select * from tbl_students;");
+
+            while (rs1.next())
+
+                System.out.println(rs1.getInt("id") + rs1.getString("name") + rs1.getString("course")+ rs1.getInt("reg_no")+rs1.getString("date_birth")+rs1.getInt("java_marks")+rs1.getInt("php_marks")+rs1.getInt("python_marks"));
+                  myList.add(new Student());
+
+        } catch (Exception e) {
+
+            System.out.println(e);
+            e.printStackTrace();
+
+        }
+        return myList;
+
+        }
+
 
 
     public static Connection getDbConnection(String url, String username, String password) {
@@ -75,7 +109,7 @@ public class MyDbConn {
             Connection conn = getDbConnection("jdbc:mysql://localhost:3306/student_db", "root", "");
             System.out.println("insert students:");
             Statement stmt = conn.createStatement();
-            int rs1 = stmt.executeUpdate("insert into tbl_students(name,reg_no,course, date_of_birth, java_marks, php_marks, python_marks)VALUES (student.getName(),student.getRegNo(),student.getCourse(),student.getDateBirth(),student.getJavaMarks(),student.getPhpMarks(), student.getPythonMarks()");
+            int rs1 = stmt.executeUpdate("insert into tbl_students(name,course,reg_n0, date_of_birth, java_marks, php_marks, python_marks)VALUES (student.getName(),student.getRegNo(),student.getCourse(),student.getDateBirth(),student.getJavaMarks(),student.getPhpMarks(), student.getPythonMarks()");
             conn.close();
         } catch (Exception e) {
             System.out.println(e);
@@ -101,4 +135,5 @@ public class MyDbConn {
             e.printStackTrace();
         }
     }
+
 }
