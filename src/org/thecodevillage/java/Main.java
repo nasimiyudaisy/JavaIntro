@@ -58,6 +58,9 @@ public class Main {
             System.out.println("Enter Course");
             student.setCourse(input.next());
 
+            System.out.println("Enter RegNo");
+            student.setRegNo(input.next());
+
             System.out.println("Enter dateBirth");
             student.setDateBirth(input.next());
 
