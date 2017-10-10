@@ -21,62 +21,7 @@ public class MyDbConn {
     int phpMarks;
     int pythonMarks;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCourse() {
-        return course;
-    }
-
-    public void setCourse(String course) {
-        this.course = course;
-    }
-
-    public String getRegNo() {
-        return regNo;
-    }
-
-    public void setRegNo(String regNo) {
-        this.regNo = regNo;
-    }
-
-    public String getDateBirth() {
-        return dateBirth;
-    }
-
-    public void setDateBirth(String dateBirth) {
-        this.dateBirth = dateBirth;
-    }
-
-    public int getJavaMarks() {
-        return javaMarks;
-    }
-
-    public void setJavaMarks(int javaMarks) {
-        this.javaMarks = javaMarks;
-    }
-
-    public int getPhpMarks() {
-        return phpMarks;
-    }
-
-    public void setPhpMarks(int phpMarks) {
-        this.phpMarks = phpMarks;
-    }
-
-    public int getPythonMarks() {
-        return pythonMarks;
-    }
-
-    public void setPythonMarks(int pythonMarks) {
-        this.pythonMarks = pythonMarks;
-    }
-
+   
     public MyDbConn(String name, String course, String regNo, String dateBirth, int javaMarks, int phpMarks, int pythonMarks) {
         this.name = name;
         this.course = course;
@@ -110,7 +55,7 @@ public class MyDbConn {
         }
         updateStudent();
         deleteStudent();
-        //insertStudent();
+       //  insertStudent();
 
         ArrayList<Student> myList=new ArrayList<>();
         myList=getMyList();
@@ -134,6 +79,7 @@ public class MyDbConn {
             while (rs1.next())
 
                 System.out.println(rs1.getInt("id") + rs1.getString("name") + rs1.getString("course")+ rs1.getInt("reg_no")+rs1.getString("date_birth")+rs1.getInt("java_marks")+rs1.getInt("php_marks")+rs1.getInt("python_marks"));
+
 
             Student student=new Student();
             student.setName(rs1.getString("name"));
